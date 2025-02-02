@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4ec;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .no {
+            background-color: #808080;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen inicial -->
+    <img src="https://raw.githubusercontent.com/FadGhast/San-Valentin-/main/Screenshot_20250201_134642_Chrome.jpg" alt="Gato con corazones">
+    
+    <h1>¿Quieres salir conmigo en San Valentín? 💖</h1>
+    
+    <button class="yes" onclick="respuestaSi()">Sí 💕</button>
+    <button class="no" id="btnNo" onclick="respuestaNo()">No 😔</button>
+
+    <div id="respuesta"></div>
+
+    <script>
+        function respuestaSi() {
+            document.body.innerHTML = `
+                <h1>¡Yo también aún te amo! 💖</h1>
+                <img src="https://raw.githubusercontent.com/FadGhast/San-Valentin-/main/Screenshot_20250201_134706_Chrome.jpg" alt="Gatitos enamorados">
+            `;
+        }
+
+        function respuestaNo() {
+            let btnNo = document.getElementById("btnNo");
+            if (btnNo.innerText === "No 😔") {
+                btnNo.innerText = "Piénsalo de nuevo 🤔";
+            } else {
+                document.body.innerHTML = `
+                    <h1>Está bien... 😞</h1>
+                    <img src="https://raw.githubusercontent.com/FadGhast/San-Valentin-/main/Screenshot_20250201_135033_Chrome.jpg" alt="Gato triste">
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
